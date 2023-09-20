@@ -4,7 +4,7 @@ namespace Repository {
 
     use Entity\Todolist;
 
-    interface TodoListRepository
+    interface TodolistRepository
     {
         function save(TodoList $todoList): void;
 
@@ -14,7 +14,7 @@ namespace Repository {
 
     }
 
-    class TodoListRepositoryimpl implements todoListRepository {
+    class TodolistRepositoryimpl implements todoListRepository {
 
         public array $todoList = array();
 
