@@ -6,7 +6,8 @@ namespace Repository {
 
     interface TodolistRepository
     {
-        function save(TodoList $todoList): void;
+
+        function save(Todolist $todolist): void;
 
         function remove(int $number): bool;
 
@@ -14,27 +15,27 @@ namespace Repository {
 
     }
 
-    class TodolistRepositoryimpl implements todoListRepository {
+    class TodolistRepositoryImpl implements TodolistRepository
+    {
 
-        public array $todoList = array();
+        public array $todolist = array();
 
-        private \PDO $connections;
+        private \PDO $connection;
 
-        public function __construct(\PDO $connections)
+        public function __construct(\PDO $connection)
         {
-            $this->connections = $connections;
+            $this->connection = $connection;
         }
 
-        function save(TodoList $todoList): void
+        function save(Todolist $todolist): void
         {
-            // $number = sizeof($this->todoList) + 1;
-            // $this->todoList[$number] = $todoList;
+            // $number = sizeof($this->todolist) + 1;
+            // $this->todolist[$number] = $todolist;
 
-            $sql = "INSERT INTO todoList(todo) VALUES (?)";
-            $statement = $this->connections->prepare($sql);
-            $statement->execute([$todoList->getTodo()]);
+            $sql = "INSERT INTO todolist(todo) VALUES (?)";
+            $statement = $this->connection->prepare($sql);
+            $statement->execute([$todolist->getTodo()]);
         }
-
 
         function remove(int $number): bool
         {
@@ -86,4 +87,5 @@ namespace Repository {
             return $result;
         }
     }
+
 }
