@@ -9,9 +9,9 @@ require_once __DIR__ . "/../Helper/InputHelper.php";
 use Entity\Todolist;
 use \Repository\TodolistRepositorylmpl;
 use \Service\TodolistServicelmpl;
-use\View\TodolistView;
+use \View\TodolistView;
 
-function testViewShowTodolist():void 
+function testViewShowTodolist():void
 {
     $todolistRepository = new TodolistRepositoryImpl();
     $todolistService = new TodolistServicelmpl($todolistRepository);
@@ -44,7 +44,7 @@ function testViewAddTodolist():void
     $todolistService->ShowTodolist();
 }
 
-function testViewRemoveTodolist(): void 
+function testViewRemoveTodolist(): void
 {
     $todolistRepository = new TodolistRepositoryImpl();
     $todolistService = new TodolistServiceImpl($todolistRepository);
