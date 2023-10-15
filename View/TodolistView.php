@@ -38,7 +38,7 @@ namespace View {
                 }
             }
 
-            echo "Sampai Jumpa Lagi" . PHP_EOL;
+            echo "Terima Kasih, Sampai Jumpa Lagi" . PHP_EOL;
         }
 
         function addTodolist(): void
@@ -66,7 +66,5 @@ namespace View {
                 $this->todolistService->removeTodolist($pilihan);
             }
         }
-
     }
-
 }

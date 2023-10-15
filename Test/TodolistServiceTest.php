@@ -1,9 +1,9 @@
 <?php
 
-require_once _DIR_ . "/../Entity/Todolist.php";
-require_once _DIR_ . "/../Repository/TodolistRepository.php";
-require_once _DIR_ . "/../Service/TodolistService.php";
-require_once _DIR_ . "/../Config/Database.php";
+require_once __DIR__ . "/../Entity/Todolist.php";
+require_once __DIR__ . "/../Repository/TodolistRepository.php";
+require_once __DIR__ . "/../Service/TodolistService.php";
+require_once __DIR__ . "/../Config/Database.php";
 
 use Entity\Todolist;
 use Service\TodolistServiceImpl;
